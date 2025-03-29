@@ -1,0 +1,108 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="Black" HorizontalOptions="Fill">
+        <Label TextColor="Gold"
+                Text="Helo In My First App" 
+                FontSize="35" 
+                Padding="0,0,0,25"
+                />
+
+        <ScrollView BackgroundColor="MediumPurple"
+                    HorizontalOptions="Fill"
+                    Margin="25,0,25,25"
+                    >
+            <StackLayout 
+                 BackgroundColor="MediumPurple"
+                 HorizontalOptions="Fill"
+                 Margin="15"
+                >
+                
+
+                <Entry Placeholder="Enter Your Name"
+                        Background="Black"
+                        HorizontalOptions="Fill"
+                        Margin="0,0,0,25"
+                        x:Name="Entry_name"
+                       HorizontalTextAlignment="Center"
+                />
+
+                <Label Text="Chose Your Favourite Color"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,0,0,5"
+                />
+                <Picker 
+                     x:Name="picker_color"
+                     BackgroundColor="Black"
+                     TextColor="White"
+                     Margin="0,0,0,25"
+                    HorizontalTextAlignment="Center"
+                    >
+                    <Picker.Items>
+                        <x:String>Red</x:String>
+                        <x:String>Blue</x:String>
+                        <x:String>Green</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Just Move The point Of line"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,0,0,5"
+                />
+                <Slider Maximum="100" 
+                    Minimum="0"
+                        HorizontalOptions="Fill"
+                    x:Name="Slider_number">
+                </Slider>
+
+                <Label x:Name="mode_lable"
+                    Text="Lighte Mode"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,0,0,5"
+                />
+                <Switch  x:Name="switch_mode_color"
+                    HorizontalOptions="Center"
+                    Toggled="on_sweitch_toggled"
+                />
+
+                <Button HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    Text="Clik to Print"
+                    TextColor="Black"
+                    Clicked="onButton_print"
+                    x:Name="Button_print"
+                    Margin="0,0,0,25" 
+                />
+
+                <Label x:Name="Label_print"
+                    Text=""
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                />
+
+            </StackLayout>
+
+
+        </ScrollView>
+
+
+        <Button Text="to open another page"
+                x:Name="Button_open_new_page"
+                Clicked="OnButton_open_new_page"
+                HorizontalOptions="Center"/>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
